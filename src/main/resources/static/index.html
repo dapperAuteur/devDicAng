@@ -1,26 +1,58 @@
 <!DOCTYPE html>
-<html data-ng-app="myApp">
+<html data-ng-app="MyModule">
 	<head>
-	<meta charset="UTF-8">
-		<title>Angular Developer Dictionary</title>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-		
+		<meta charset="UTF-8">
+		<title>Dev Dictionary Angular</title>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!--   dependencies -->
+	  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.0.1/ui-bootstrap-tpls.min.js"></script>
+	  <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<!-- my scripts -->
+	  <script src="/js/app/app.module.js"></script>
+	  <script src="/js/app/app.config.js"></script>
+	  <script src="/js/app/blog-list/blog-list.module.js"></script>
+	  <script src="/js/app/blog-list/blog-list.component.js"></script>
 	</head>
-	<body class="container">
-		<h1>Angular Developer Dictionary</h1>
+	<body>
+	
+		<nav class="navbar navbar-default navbar-inverse" role="navigation">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">Dev Dictionary Angular</a>
+		    </div>
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a data-ui-sref="home">Home</a></li>
+		        <li><a data-ui-sref="about">About</a></li>
+		        <li><a data-ui-sref="settings">Settings</a></li>
+		        <li><a data-ui-sref="profile">Profile</a></li>
+		        <li><a data-ui-sref="terms">Terms</a></li>
+		        <li><a data-ui-sref="topics">Topics</a></li>
+		        <li><a data-ui-sref="leader-board">Leader Board</a></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+		<div class="container">
+			<div class="" ng-controller="BlogListCongroller"></div>
 		
-		<div data-ng-controller="MainCtrl">
-			<div data-ng-controller="UserCtrl"></div>
-			<div data-ng-controller="TermCtrl"></div>
-			<div data-ng-controller="DefCtrl"></div>
-		</div>
-	
+			
+		  <data-ui-view></data-ui-view>
+		  <h1>{{2+3}}= 3 + 2</h1>
+		</div>  
 	  
+	<!--   my scripts -->
 	  
-	<script src="/angular-1.6.2/angular.min.js"></script>
-	<script rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.3/angular-material.css"></script>
-	<script rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.3/angular-material.js"></script>
-	<script type="text/javascript" src="/js/script.js"></script>
-	
+
+	  	
 	</body>
 </html>

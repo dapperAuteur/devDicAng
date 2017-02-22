@@ -8,11 +8,6 @@
 	  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 	  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.0.1/ui-bootstrap-tpls.min.js"></script>
 	  <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
-	<!-- my scripts -->
-	  <script src="/js/app/app.module.js"></script>
-	  <script src="/js/app/app.config.js"></script>
-	  <script src="/js/app/blog-list/blog-list.module.js"></script>
-	  <script src="/js/app/blog-list/blog-list.component.js"></script>
 	</head>
 	<body>
 	
@@ -43,7 +38,6 @@
 		  </div><!-- /.container-fluid -->
 		</nav>
 		<div class="container">
-			<div class="" ng-controller="BlogListCongroller"></div>
 		
 			
 		  <data-ui-view></data-ui-view>
@@ -51,7 +45,10 @@
 		</div>  
 	  
 	<!--   my scripts -->
-	  
+	  <script src="app.js"></script>
+	  <script src="/controllers/mainCtrl.js"></script>
+	  <script src="/controllers/settingsCtrl.js"></script>
+	  <script src="/controllers/termsCtrl.js"></script>
 
 	  	
 	</body>
