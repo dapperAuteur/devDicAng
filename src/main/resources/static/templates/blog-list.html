@@ -2,5 +2,5 @@
 <button ng-click="someClickTest()">click me</button>
 
 <ul>
-	<li ng-repeat= 'item in items'>{{item}}</li>
+	<li ng-repeat= 'item in items'><a ng-href='/blog/{{item.id}}'/>{{item.title}}</a></li>
 </ul>
