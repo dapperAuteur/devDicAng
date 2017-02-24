@@ -3,4 +3,4 @@
  */
 'use strict';
 
-angular.module('blogList', ['blogList']);
+angular.module('blogList', ['post']);
