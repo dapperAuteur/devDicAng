@@ -10,5 +10,6 @@ angular.module('MyModule', [
 	'ui.bootstrap',
 	
 	//internal
+	'blogDetail',
 	'blogList'
 ]);

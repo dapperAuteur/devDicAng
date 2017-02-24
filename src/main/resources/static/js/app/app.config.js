@@ -20,8 +20,8 @@ angular.module('MyModule')
 				when("/about", {
 					templateUrl: "/templates/about.html"
 				}).
-				when("/blog/1", {
-					template: "<h1>Where's 3rd Street?</h1>"
+				when("/blog/:id", {
+					template: "<blog-detail></blog-detail>"
 				}).
 				otherwise({
 					template: "<h1>You're on 3rd Street!</h1>"

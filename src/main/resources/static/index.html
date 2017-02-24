@@ -15,8 +15,11 @@
 	<!-- my scripts -->
 	  <script src="/js/app/app.module.js"></script>
 	  <script src="/js/app/app.config.js"></script>
+	  <script src="/js/app/blog-detail/blog-detail.module.js"></script>
+	  <script src="/js/app/blog-detail/blog-detail.component.js"></script>
 	  <script src="/js/app/blog-list/blog-list.module.js"></script>
 	  <script src="/js/app/blog-list/blog-list.component.js"></script>
+	  
 	</head>
 	<body>
 	
@@ -47,7 +50,12 @@
 		  </div><!-- /.container-fluid -->
 		</nav>
 		<div class="container">
-			<blog-list></blog-list>
+			
+			<div ng-view>
+			</div>
+		
+			
+		  
 			
 		  <h1>{{2+3}}= 3 + 2</h1>
 		</div>  
