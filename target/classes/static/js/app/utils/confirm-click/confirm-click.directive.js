@@ -4,19 +4,22 @@
 'use strict';
 
 angular.module('confirmClick').
-	directive('confirmClick', function(){
+	directive('confirmClick', function($rootScope, $location){
 		return {
 			
 			scope: {
 				message: "@message",
 				post: "=post"
 			},
-			template: "<a ng-href='/blog/{{ post.id }}'>{{ post.title }}</a>",
+			template: "<a ng-href='#'>{{ post.title }}</a>",
 			link: function(scope, element, attr){//console logs for each link
 				var msg = scope.message || "Are you sure?";
 				element.bind("click", function(event){
 					if(window.confirm(msg)){
 						console.log('/blog/' + scope.post.id);
+						$rootScope.$apply(function(){
+							$location.path("/blog/" + scope.post.id);
+						})
 					}
 				})
 				console.log(scope);//gives ChildScope{} object
