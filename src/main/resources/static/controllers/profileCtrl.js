@@ -5,9 +5,9 @@
 	
 angular.module("MyModule").controller("ProfileCtrl", function($state) {
 	
-	var obj = this;
-	
-	obj.user = "Anthony";
+//	var obj = this;
+//	
+//	obj.user = "Anthony";
 	
 //	obj.about = ""
 });

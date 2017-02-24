@@ -3,4 +3,12 @@
  */
 'use strict';
 
-angular.module('MyModule', ['blogList']);
+angular.module('MyModule', [
+	//external
+	'ngResource',
+	'ui.router',
+	'ui.bootstrap',
+	
+	//internal
+	'blogList'
+]);
