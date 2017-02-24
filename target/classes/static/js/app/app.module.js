@@ -6,7 +6,7 @@
 angular.module('MyModule', [
 	//external
 	'ngResource',
-	'ui.router',
+	'ngRoute',
 	'ui.bootstrap',
 	
 	//internal
