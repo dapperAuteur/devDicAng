@@ -6,9 +6,22 @@
 angular.module('blogDetail').
 	component('blogDetail', {
 		templateUrl: '/templates/blog-detail.html',
-		controller: function($http, $location, $routeParams, $scope){
+		controller: function(Post, $http, $location, $routeParams, $scope){
 			
-			$http.get("/json/posts.json").then(successCallback, errorCallback);
+			console.log(Post.query());
+			console.log(Post.get());
+			
+			Post.query(function(data){
+				angular.forEach(data, function(post){
+					if(post.id == $routeParams.id){
+						$scope.notFound = false;
+						$scope.post = post;
+					}
+//					console.log(post);
+				});
+			})
+			
+//			$http.get("/json/posts.json").then(successCallback, errorCallback);
 			
 			function successCallback(response, status, config, statusText){
 				$scope.notFound = false;
