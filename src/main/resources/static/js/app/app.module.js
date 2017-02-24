@@ -1,5 +1,5 @@
 /**
- * 
+ * this is where I add all my global dependencies
  */
 'use strict';
 
@@ -11,5 +11,6 @@ angular.module('MyModule', [
 	
 	//internal
 	'blogDetail',
-	'blogList'
+	'blogList',
+	'confirmClick'
 ]);
