@@ -2,8 +2,8 @@
 
 <ul ng-if='items.length > 0'>
 	<li ng-repeat= 'item in items'>
-<!-- 		<a ng-href='/blog/{{item.id}}'/>{{item.title}}</a> this line does the same as the line below-->
-			<confirm-click message='Are you positive?' post='item'></confirm-click>
+		<a ng-href='blog/{{item.id}}' confirm-click='Are you ready?' confirmed-click='blog/{{ item.id }}'/>{{item.title}}</a> <!-- this line does the same as the line below -->
+<!-- 			<confirm-click message='Are you positive?' post='item'></confirm-click> -->
 	</li>
 </ul>
 
