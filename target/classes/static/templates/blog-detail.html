@@ -1,11 +1,11 @@
+<div class="page-header">
+  <h1>{{ post.title }}<small>{{ post.publishDate }}</small></h1>
+</div>
+
 <h1 class="">{{ post.id }}</h1>
 
-<h1 class="">{{ post.title }}</h1>
-
 <h1 class="">{{ post.description }}</h1>
-
-<h1 class="">{{ post.publishDate }}</h1>
-
+<hr/>
 <ul>
 	<li>
 		<input type='text' ng-model='query' placeholder='Filter Comments'/>
@@ -14,7 +14,7 @@
 		{{ comment.text}} <a href='#' confirm-click='Do you want to delete this?' confirmed-click='deleteComment(comment)'>Confirm</a> <a href ng-click='deleteComment(comment)'>Delete</a>
 	</li>
 </ul>
-
+<hr/>
 <p style='color:red;' ng-if='reply.text'>Reply: {{ reply.text }}</p>
 <form ng-submit='addReply()'>
 	<input type='hidden' ng-model='reply.id'>
